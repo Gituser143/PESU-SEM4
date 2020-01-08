@@ -21,4 +21,4 @@ Description of numOccurrences
 
 Decleration: int numOccurrences(int arr[], int n, int key)
 
-This function searches for the number of occurences of 'key' in the array 'arr[]' which has a size of 'n'. It traverses through the array and everytime it encounters the variable with value 'key' a count variable holding the count is incremented by 1. After the traversal, the count variable is returned.
+This function searches for the number of occurences of 'key' in the array 'arr[]' which has a size of 'n'. It traverses through the array and everytime it encounters the variable with value 'key' a count variable holding the count of occurences of 'Key' is incremented by 1. After the traversal, the count variable is returned.
