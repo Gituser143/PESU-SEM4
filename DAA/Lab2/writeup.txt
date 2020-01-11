@@ -1,0 +1,31 @@
+Description of searchFirstOccurrence
+=====================================
+
+Decleration: int searchFirstOccurrence(char *pattern, char *text)
+
+This function searches for the very first occurence of 'pattern' passed to it in the string 'text'. The function searches by traversing the text from the beginning to the (end-size(pattern)). We then check if the pattern matches from index of the text we are on. If it does, it return the index the pattern matched from, if no match occurs, we return -1.
+
+
+
+Description of searchLastOccurrence
+====================================
+
+Decleration: int searchLastOccurrence(char *pattern, char *text)
+
+This function searches for the very first occurence of 'pattern' passed to it in the string 'text'. The function searches by traversing the text from the (end-size(pattern)) to the beginning of the pattern. We then check if the pattern matches from index of the text we are on. If it does, it return the index the pattern matched from, if no match occurs, we return -1.
+
+
+
+Description of numOccurrences
+==============================
+
+Decleration: int numOccurrences(char *pattern, char *text)
+
+This function searches for the number of occurences of 'pattern' in the the string 'text'. We assign a temporary char* temp with the value of text. We shift temp to a new index everytime a pattern is found and increment count. We break if no occurence is found. We loop until temp is not an empty string. 
+
+Description of longestPrefix
+==============================
+
+Decleration: int longestPrefix(char *pattern, char *text)
+
+
