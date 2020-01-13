@@ -3,13 +3,14 @@
   MOV r3, #4
   LDR r4, =C
 loop:
-  LDR r5, [r0]
-  STR r5, [r4]
-  ADD r4, r4, #1
+  LDRb r1, [r0]
+  ADD r2, r2, r1
   ADD r0, r0, #1
   SUBs r3, r3, #1
   BNE loop
   
+end:
+  STR r2, [r4]
   
 .data
   A: .byte 10, 20, 30, 40
