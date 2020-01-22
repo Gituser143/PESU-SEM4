@@ -1,0 +1,62 @@
+Description of isSorted
+=====================================
+
+Decleration: int isSorted(int *a, int n)
+
+This checks if the array is sorted. It traverses through the array and checks if a value is greater than the value at the next index. If greater, the function returns 0, meaning the array is not sorted. If the array is sorted, it returns 1.
+
+
+Description of bubblePass
+=====================================
+
+Decleration: int void bubblePass(int *a, int n)
+
+This function does one iteration of swapping of adjacent elements. This is used in bubble sort. Multiple iterations of this will sort the array. It compares adjacent elements and swaps them if not sorted.
+
+
+Description of bubbleSort
+=====================================
+
+Decleration: void bubbleSort(int *a, int n);
+
+This function sorts an array given to it. It uses bubblePass multiple times. It calls bubblePass on smaller sizes of the array through every iteration (1 element less). This sorts the array in ascending order.
+
+
+Description of numBubblePasses
+=====================================
+
+Decleration: int numBubblePasses(int *a, int n);
+
+This function returns the minimum number of times bubblePass is used during bubbleSort. It essentially runs the bubble sort algorithm and increments a counter for every call of bubblePass while the array is not sorted. 
+
+
+Description of maxIndex
+=====================================
+
+Decleration: int maxIndex(int *a, int n)
+
+This function returns the index of the maximum value element in the array. It traverses through the array and stores the index of the maximum value element it encountered so far. If it encounters the same value at a further position or a greater value, the index is updated. This index is then returned.
+
+
+Description of swapWithMax
+=====================================
+
+Decleration: void swapWithMax(int *a, int n)
+
+This function swaps the max element with the last element if the max element is not at the last index. It uses the maxIndex function to find the index of the max element and then performs a simple swap if the index is not the last index.
+
+ 
+Description of selectionSort
+=====================================
+
+Decleration: void selectionSort(int *a, int n)
+
+This function uses the maxIndex and the swapWithMax functions to perform selection sort. It iterates 0 to n-1 times and performs a swapWithmax for array of decrementing sizes, i.e, n-i. This way the largest element gets put to the last, second largest to second last and so on.
+
+
+Description of numSwaps
+=====================================
+
+Decleration: int numSwaps(int *a, int n)
+
+This function returns the number of times swapWithMax is used during selectionSort. It essentially runs the selection sort algorithm and increments a counter for every call of bubblePass while the array is not sorted. 
