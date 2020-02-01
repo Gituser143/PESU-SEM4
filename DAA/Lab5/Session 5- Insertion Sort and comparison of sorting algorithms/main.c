@@ -16,17 +16,7 @@ double time_elapsed(struct timespec start, struct timespec end)
 }
 int main()
 {
-    // Record lis[5];
-    // lis[1].score = 92;
-    // lis[1].serialnumber = 1234;
-    // lis[2].score = 1;
-    // lis[2].serialnumber = 1;
-    // lis[4].score =99;
-    // lis[4].serialnumber = 9;
-    // lis[3].score = 9999;
-    // lis[3].serialnumber = 123123123;
-    // lis[0].score = 100;
-    // lis[0].serialnumber = 2123456;
+
     int num;
     scanf("%d",&num);
     Record Insert[num];
@@ -35,7 +25,7 @@ int main()
     for(int i=0;i<num;i++)
     {
         scanf("%ld",&Insert[i].serialnumber);
-        scanf("%ld",&Insert[i].score);
+        scanf("%d",&Insert[i].score);
         Bubble[i] = Insert[i];
         Select[i] = Insert[i];
     }
@@ -45,20 +35,16 @@ int main()
     clock_gettime(CLOCK_REALTIME, &start); //Start timestamp
     long int result = InsertionSort(Insert,num);
     clock_gettime(CLOCK_REALTIME, &end); //End timestamp
-    printf("Inserion Sort : %ld %lf\n",result,time_elapsed(start, end));
+    printf("Insertion Sort : %ld %lf\n",result,time_elapsed(start, end));
 
     clock_gettime(CLOCK_REALTIME, &start); //Start timestamp
     result = BubbleSort(Bubble,num);
     clock_gettime(CLOCK_REALTIME, &end); //End timestamp
-    printf("Bubble Sort Sort : %ld %lf\n",result,time_elapsed(start, end));
+    printf("Bubble Sort : %ld %lf\n",result,time_elapsed(start, end));
 
     clock_gettime(CLOCK_REALTIME, &start); //Start timestamp
     result = SelectionSort(Select,num);
     clock_gettime(CLOCK_REALTIME, &end); //End timestamp
     printf("Selection Sort : %ld %lf\n",result,time_elapsed(start, end));
 
-    // for(int i=0;i<5;i++)
-    // {
-    //     printf("%ld %ld \n",lis[i].serialnumber,lis[i].score);
-    // }
 }

@@ -13,6 +13,10 @@ long int InsertionSort(Record* A, int n)
             A[j + 1] = A[j];
             j--;
         }
+        if(j!=-1)
+        {
+          count++;
+        }
         A[j + 1] = temp;
     }
     return count;
@@ -26,9 +30,10 @@ long int BubbleSort(Record* A, int n)
         int noSwaps = 0;
         for (int j = 0; j < n - 1 - i ; j++)
         {
-            if (A[j + 1].serialnumber < A[j].serialnumber)
+            count++;
+            if (A[j + 1].serialnumber < A[j].serialnumber )
             {
-                count++;
+
                 Record temp = A[j];
                 A[j] = A[j + 1];
                 A[j + 1] = temp;
