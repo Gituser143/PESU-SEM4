@@ -11,3 +11,4 @@ This repo contains lab experiments for the courses DAA lab and MPCA lab from SEM
 * Lab 1: Adding 5 numbers, Checking equality, Checking odd/even, Addition, Logical Operators.
 * Lab 2: Add from memory, Move array from memory, Move byte addressed array
 * Lab 3: Linear search, Fibonacci, Convolution, GCD, Adding 10 numbers
+* Lab 5: Comparison of sorting algorithms
