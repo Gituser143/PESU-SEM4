@@ -38,7 +38,7 @@ long int InsertionSort(Record* A, int n)
   return count;
 }
 // Function to sort an array a[] of size 'n'
-void binaryInsertionSort(Record* a, int n)
+void BinaryInsertionSort(Record* a, int n)
 {
     int i, loc, j, k;
     Record selected;
@@ -51,7 +51,7 @@ void binaryInsertionSort(Record* a, int n)
         loc = binarySearch(a, selected, 0, j);
 
         // Move all elements after location to create space
-        while (j >= loc)
+        while (j > loc)
         {
             a[j+1] = a[j];
             j--;
