@@ -17,8 +17,8 @@ double time_elapsed(struct timespec start, struct timespec end)
 int main()
 {
 
-    int num;
-    scanf("%d",&num);
+    long int num;
+    scanf("%ld",&num);
     Record Insert[num];
     Record Bubble[num];
     Record Select[num];
