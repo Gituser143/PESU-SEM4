@@ -1,4 +1,5 @@
 #include<stdbool.h>
+#include <math.h>
 #include "graphSearch.h"
 
 int max = 0;
@@ -54,6 +55,19 @@ void DFS(int v, bool visited[], int n, const int graph[][n])
   }
 }
 
+void DFSWithK(int v, bool visited[], int n, const int graph[][n], int k)
+{
+  count++;
+  visited[v] = true;
+  for(int i = 0; i<n; i++)
+  {
+    if(graph[v][i] && !visited[i] && fabs(v-i) <= k)
+    {
+      DFS(i, visited, n, graph);
+    }
+  }
+}
+
 Result pepesAnswers(int n, const int safeSeq[][n])
 {
   bool visited[n];
@@ -85,5 +99,27 @@ Result pepesAnswers(int n, const int safeSeq[][n])
 
 Result pepesAnswersWithK(int n, const int safeSeq[][n], int k)
 {
+  bool visited[n];
+  int comp = 0;
+  for(int v = 0; v < n; v++)
+  {
+    visited[v] = false;
+  }
+  for(int v = 0; v < n; v++)
+  {
+    if(visited[v] == false)
+    {
+      count = 0;
+      DFSWithK(v, visited, n, safeSeq,k);
+      comp += 1;
+      if(count > max)
+        max = count;
+    }
+  }
+
+  Result res;
+  res.numDeliveryFrogs = comp;
+  res.maxHouses = max;
+  return res;
 
 }
