@@ -1,5 +1,5 @@
 .text
-  MOV r0, #8
+  MOV r0, #1
   MOV r1, #32
 loop:
   ANDs r2, r0, #1
