@@ -7,7 +7,7 @@ int searchArr(int a[], int n, int mobile)
 {
 	for (int i = 0; i < n; i++)
 		if (a[i] == mobile)
-		return i + 1;
+			return i + 1;
 }
 
 int getMobile(int a[], bool dir[], int n)
@@ -68,7 +68,7 @@ int printOnePerm(int a[], bool dir[], int n)
 	}
 
 	for (int i = 0; i < n; i++)
-		printf("%d ", a[i]);
+		printf("%d", a[i]);
 	printf("\n");
 }
 

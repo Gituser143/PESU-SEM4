@@ -1,25 +1,49 @@
+#include <stdio.h>
 #include<stdlib.h>
 #include"mergeSort.h"
 void mergeSortedHalfs(int *a, int start, int mid, int end)
 {
-  int i = 0, j = 0, k = 0;
-  int m = mid - start;
-  while(i <= m && j <= m)
+  int i,j,k;
+  int n1 = mid - start + 1;
+  int n2 = end -mid;
+  int *L = malloc(sizeof(int)*n1);
+  int *R = malloc(sizeof(int)*n2);
+  for (i = 0; i < n1; i++)
   {
-    if(a[i] < a[m+j])
-      a[k++] = a[i++];
+    L[i] = a[start + i];
+  }
+  for (j = 0; j < n2; j++)
+  {
+    R[j] = a[mid + 1 + j];
+  }
+  i = 0;
+  j = 0;
+  k = start;
+  while (i < n1 && j < n2)
+  {
+    if (L[i] <= R[j])
+    {
+      a[k] = L[i];
+      i++;
+    }
     else
-      a[k++] = a[m+(j++)];
+    {
+      a[k] = R[j];
+      j++;
+    }
+    k++;
   }
-
-  while(i <= m)
+  while (i < n1)
   {
-    a[k++] = a[i++];
+    a[k] = L[i];
+    i++;
+    k++;
   }
-
-  while(j <= m)
+  while (j < n2)
   {
-    a[k++] = a[m+(j++)];
+    a[k] = R[j];
+    j++;
+    k++;
   }
 }
 
@@ -62,5 +86,9 @@ void selectiveMergeSort(int *a, int start, int end, int parameter)
   else
   {
     mergeSort(a, start, end);
+    for(int  i = 0; i < end; i++)
+    {
+        printf("%d\n",a[i]);
+    }
   }
 }
