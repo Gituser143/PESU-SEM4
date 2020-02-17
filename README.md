@@ -9,6 +9,7 @@ This repo contains lab experiments for the courses DAA lab and MPCA lab from SEM
 * Lab 4: Travelling Salesman problem
 * Lab 5: Comparison of sorting algorithms
 * Lab 6: Pepe Graph. DFS
+* Lab 7: Merge sort
 ## MPCA
 * Lab 1: Adding 5 numbers, Checking equality, Checking odd/even, Addition, Logical Operators.
 * Lab 2: Add from memory, Move array from memory, Move byte addressed array
