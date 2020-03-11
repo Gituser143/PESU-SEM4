@@ -1,14 +1,14 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-/* Design an efficient algorithm to find all anagrams in a dictionary file 
+/* Design an efficient algorithm to find all anagrams in a dictionary file
 EX:
 1)ate = tea = eat
 2)conversation = voice rants on
 */
 char * sort(char * a)
 {
-int n=  strlen(a);
+int n = strlen(a);
 
 for(int i = 0; i < n; i++)
   {
@@ -27,9 +27,9 @@ for(int i = 0; i < n; i++)
 int strmatch(char * f , char * b)
 {
 int n=  strlen(f);
-for(int i= 0;i<n ;++i )
+for(int i = 0; i<n; ++i)
       {
-      if(f[i]!=b[i])
+      if(f[i] != b[i])
             return 0;
       }
       return 1;
@@ -40,8 +40,8 @@ void anagram(char *str,char a[][1000])
 int n= strlen(str);
 for(int i = 0;i<6; ++i)
       {
-      int m= strlen(a[i]);
-      if(m==n)
+      int m = strlen(a[i]);
+      if(m == n)
             {
             char c[n];
             strcpy(c,a[i]);
@@ -55,13 +55,12 @@ for(int i = 0;i<6; ++i)
 }
 int main()
 {
-char a[7][1000]={"ate","eat","tea","dog","god","cat","act"};
-char b[3][1000]={"eat","dog","cat"};
+char a[7][1000] = {"ate","eat","tea","dog","god","cat","act"};
+char b[3][1000] = {"eat","dog"};//,"cat"};
 int n = 3;
-for(int i=0 ;i<n;++i )
+for(int i = 0; i < n; ++i)
       {
-      printf("%d)\n",i+1);
+      printf("\n%dst Anagram\n=============\n",i+1);
       anagram(b[i],a);
       }
 }
-
