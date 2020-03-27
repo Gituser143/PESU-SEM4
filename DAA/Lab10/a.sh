@@ -6,3 +6,5 @@ while IN= read -r LINE
 do
   grep "^$LINE$" /usr/share/dict/words >> final
 done < temp
+echo "The anagarams are:"
+cat final
